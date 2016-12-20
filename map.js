@@ -37,7 +37,7 @@ function getData(){
 
   get = $.ajax({
     type: 'GET',
-    url: 'http://sparql.odp.jig.jp/api/v1/sparql?output=csv&force-accept=text%2Fplain&query=select+%3Fo+%7B%0D%0A++%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23type%3E+%3Chttp%3A%2F%2Fpurl.org%2Fjrrk%23CivicPOI%3E%3B%0D%0A+++%3Chttp%3A%2F%2Fpurl.org%2Fjrrk%23address%3E+%3Faddress.%0D%0A++filter%28regex%28%3Faddress%2C+%22%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%B0%BE%E9%81%93%E5%B8%82%22%29%29%0D%0A++%3Fs+%3Chttp%3A%2F%2Fodp.jig.jp%2Fodp%2F1.0%23genre%3E+%3Chttp%3A%2F%2Fodp.jig.jp%2Fres%2Fcategory%2F%25E9%25A3%259F%25E3%2581%25B9%25E3%2582%258B%3E.%0D%0A++%3Fs+%3Chttp%3A%2F%2Fimi.ipa.go.jp%2Fns%2Fcore%2Frdf%23%E5%9C%B0%E7%90%86%E5%BA%A7%E6%A8%99%3E+%3Fo.%0D%0A%7Dorder+by+rand%28%29+limit+100'
+    url: 'https://sparql.odp.jig.jp/api/v1/sparql?output=csv&force-accept=text%2Fplain&query=select+%3Fo+%7B%0D%0A++%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23type%3E+%3Chttp%3A%2F%2Fpurl.org%2Fjrrk%23CivicPOI%3E%3B%0D%0A+++%3Chttp%3A%2F%2Fpurl.org%2Fjrrk%23address%3E+%3Faddress.%0D%0A++filter%28regex%28%3Faddress%2C+%22%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%B0%BE%E9%81%93%E5%B8%82%22%29%29%0D%0A++%3Fs+%3Chttp%3A%2F%2Fodp.jig.jp%2Fodp%2F1.0%23genre%3E+%3Chttp%3A%2F%2Fodp.jig.jp%2Fres%2Fcategory%2F%25E9%25A3%259F%25E3%2581%25B9%25E3%2582%258B%3E.%0D%0A++%3Fs+%3Chttp%3A%2F%2Fimi.ipa.go.jp%2Fns%2Fcore%2Frdf%23%E5%9C%B0%E7%90%86%E5%BA%A7%E6%A8%99%3E+%3Fo.%0D%0A%7Dorder+by+rand%28%29+limit+100'
   });
 
   get.done(function(result) {
