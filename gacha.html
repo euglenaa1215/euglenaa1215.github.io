@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>cycle quest shimanami</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<style>
+	#oshitene {
+		position: absolute;
+		font-size: 4em;
+    	width: 100%;
+    	bottom: 10%;
+    	right: 10%;
+    	text-align:center;
+    	color:#000;
+	}
+
+	.gatya {
+		position:relative;
+    	width: 70%;
+    	margin-right: auto;
+    	margin-left: auto;
+	}
+
+	.gachagacha {
+		margin-top: 15%;
+	}
+
+	.gacha_hand {
+		opacity: 0;
+	}
+
+	.black {
+		position: absolute;
+		right: -50%;
+		width: 500%;
+		height: 200%;
+		background: #000;
+		z-index: 0;
+		opacity: 0;
+	}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+	var audio = new Audio("gacha_sound.mp3");
+
+	$(function () {
+    	setTimeout('rect()'); //アニメーションを実行
+	});
+
+	function rect() {
+    	$('#oshitene').animate({
+        	top: '-=3%'
+    	}, 800).animate({
+        	top: '+=3%'
+    	}, 800);
+    	setTimeout('rect()', 1600); //アニメーションを繰り返す間隔
+	}
+
+	function blackout() {
+		$('.black').css('zIndex', 10);
+		audio.play();
+		$('.black').animate({
+			opacity: 1
+		}, 500);
+		setTimeout("jumpNext()", 1000);
+	}
+
+	function jumpNext() {
+		window.location.href = "kirakira.html";
+	}
+	</script>
+</head>
+<body style="padding-top: 70px;">
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation" style="z-index: 999;">
+		<div class="container">
+		  <div class="navbar-header">
+		    <a class="navbar-brand" href="#">サイクルクエストしまなみ</a>
+		  </div><!-- /.navbar-header -->
+		</div><!-- /.container -->
+	</div><!-- /.navbar -->
+
+	<div class="gatya">
+		<div class="black"></div>
+		<img src="gachagacha.png" alt="" width="100%" height="100%" class="gachagacha">
+		<div id="oshitene">
+			<p>↓押してね↓</p>
+			<button class="gacha_hand" onclick="blackout()"><img src="gacha_hand.png" alt="" width="50%" height="50%"></button>
+		</div>
+	</div>
+</body>
+</html>

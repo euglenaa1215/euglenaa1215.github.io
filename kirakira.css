@@ -1,0 +1,78 @@
+body{
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(#b3a6cf, #a3a4c7);
+  font-family: -apple-system, Sans-Serif;
+}
+
+#storeName{
+  height: 10vh;
+  padding-top: 1.5vh;
+  background-color: #98aeef;
+  font-size: 60px;
+  color: #f6f9ff;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#img{
+  width: 100vw;
+  height: 50vh;
+}
+
+#ten{
+  font-size: 120%;
+}
+
+#sentence{
+  width: 80vw;
+  margin: 5vh auto 5vh auto;
+  padding: 2.5vh 0;
+  text-align: center;
+  font-size: 50px;
+  background-color: #f6f9ff;
+  border-radius: 10px;
+}
+
+#app{
+  height: 100vh;
+  width:100vw;
+  position: relative;
+  font-size: 30px
+}
+
+.glitter-star{
+  color: white;
+  position:absolute;
+  height: 64px;
+  width: 64px;
+  animation: glitter 2s linear 0s infinite normal;
+  -webkit-animaion: glitter 2s linear 0s infinite normal;
+  -moz-animation: glitter 2s linear 0s infinite normal;
+  -moz-animation: glitter 2s linear 0s infinite normal;
+  -o-animation: glitter 2s linear 0s infinite normal;
+}
+
+
+
+@keyframes glitter{
+  0%{
+    -webkit-transform: scale(1.0);
+    opacity: 1;
+  }
+  25%{
+    -webkit-transform: scale(0.5);
+    opacity: 0;
+  }
+  50%{
+    -webkit-transform: scale(1.0);
+  }
+  75%{
+    -webkit-transform: scale(1.0);
+    opacity: 1;
+  }
+  100%{
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
